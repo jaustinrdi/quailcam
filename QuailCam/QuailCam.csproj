@@ -184,6 +184,10 @@
     <Compile Include="Migrations\201501142201360_ReadingAddTimestampColumn.Designer.cs">
       <DependentUpon>201501142201360_ReadingAddTimestampColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501142210581_ReadingAddTypeColumn.cs" />
+    <Compile Include="Migrations\201501142210581_ReadingAddTypeColumn.Designer.cs">
+      <DependentUpon>201501142210581_ReadingAddTypeColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Reading.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -241,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501142201360_ReadingAddTimestampColumn.resx">
       <DependentUpon>201501142201360_ReadingAddTimestampColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501142210581_ReadingAddTypeColumn.resx">
+      <DependentUpon>201501142210581_ReadingAddTypeColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
