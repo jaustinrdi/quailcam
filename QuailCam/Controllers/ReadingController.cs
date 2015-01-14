@@ -46,7 +46,8 @@ namespace QuailCam.Controllers
                 return BadRequest(ModelState);
             }
 
-            reading.ConvertedReading = 15 * reading.RawReading;
+            // TODO: is there some way to do this during construction? how does the entity framework actually construct these objects?
+            reading.ConvertRawReading(); 
             db.Readings.Add(reading);
             db.SaveChanges();
 
