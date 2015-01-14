@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QuailCam.Models
@@ -8,8 +9,8 @@ namespace QuailCam.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        //[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        // TODO: add: public DateTime? UtcTimestamp { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public DateTime UtcTimestamp { get; set; }
         public int RawReading { get; set; }
         public double ConvertedReading { get; set; }
         // TODO: add: enum type { light, humidity, temperature }
