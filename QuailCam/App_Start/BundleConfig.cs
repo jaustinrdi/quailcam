@@ -24,7 +24,7 @@ namespace QuailCam
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/chart").Include(
-                "~/Scripts/Chart.js",
+                "~/Scripts/highcharts.js",
                 "~/Scripts/readingCharts.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

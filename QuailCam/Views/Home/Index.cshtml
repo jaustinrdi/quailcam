@@ -10,39 +10,42 @@
         <p>Thurs, Dec 11 12:42</p>
     </div>
     <div style="width: 300px; float: left; margin-top: 36px">
-        
-        <h3>Light</h3>
 
-        <div style="width: 350px; height: 150px;">
-            <canvas id="lightChart" width="340" height="140"></canvas>
+        <h3>Light <span style="font-size: 0.7em; padding-left: 5px;">
+                    <span style="font-size: 1em; font-weight: bold; color: #434348;">&#149;</span> Today
+                    <span style="font-size: 1em; font-weight: bold; color: #7cb5ec;">&#149;</span> Average
+                  </span>
+        </h3>
+        <div style="width: 350px; height: 152px; border: 1px solid gray;">
+            <div id="lightChart"></div>
         </div>
         <script type="text/javascript">
             // TODO: get this data from the controller of course
-            var lightData = {
-                labels: ["0:00", "4:00", "8:00", "12:00", "16:00", "20:00"],
-                datasets: [
-                    {
-                        label: "Average",
-                        fillColor: "rgba(220,220,220,0.2)",
-                        strokeColor: "rgba(220,220,220,1)",
-                        pointColor: "rgba(220,220,220,1)",
-                        pointStrokeColor: "#fff",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(220,220,220,1)",
-                        data: [65, 59, 80, 81, 56, 55]
-                    },
-                    {
-                        label: "Today",
-                        fillColor: "rgba(151,187,205,0.2)",
-                        strokeColor: "rgba(151,187,205,1)",
-                        pointColor: "rgba(151,187,205,1)",
-                        pointStrokeColor: "#fff",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(151,187,205,1)",
-                        data: [28, 48, 40, 19, 86, 27]
-                    }
-                ]
-            };
+            var lightChartData = [
+                {
+                    name: 'Average',
+                    pointStart: Date.UTC(2014, 0, 7),
+                    pointInterval: 3600 * 1000,
+                    data: [10, 11, 10, 12, 11, 10, 12, 20, 30, 60, 80, 90, 100, 105, 106, 104, 107, 80, 71, 60, 45, 35, 15, 11, 12, 10,
+                           10, 11, 10, 12, 11, 10, 12, 20, 30, 60, 80, 90, 100, 105, 106, 104, 107, 80, 71, 60, 45, 35, 15, 11, 12, 10,
+                           10, 11, 10, 12, 11, 10, 12, 20, 30, 60, 80, 90, 100, 105, 106, 104, 107, 80, 71, 60, 45, 35, 15, 11, 12, 10,
+                           10, 11, 10, 12, 11, 10, 12, 20, 30, 60, 80, 90, 100, 105, 106, 104, 107, 80, 71, 60, 45, 35, 15, 11, 12, 10,
+                           10, 11, 10, 12, 11, 10, 12, 20, 30, 60, 80, 90, 100, 105, 106, 104, 107, 80, 71, 60, 45, 35, 15, 11, 12, 10,
+                           10, 11, 10, 12, 11, 10, 12, 20, 30, 60, 80, 90, 100, 105, 106, 104, 107, 80, 71, 60, 45, 35, 15, 11, 12, 10,
+                           10, 11, 10, 12, 11, 10, 12, 20, 30, 60, 80, 90, 100, 105, 106, 104, 107, 80, 71, 60, 45, 35, 15, 11, 12, 10]
+                }, {
+                    name: 'Current',
+                    pointStart: Date.UTC(2014, 0, 7),
+                    pointInterval: 3600 * 1000,
+                    data: [12, 11, 10, 11, 11, 10, 15, 23, 30, 62, 81, 88, 94, 95, 92, 90, 85, 75, 71, 60, 45, 35, 15, 11, 12, 12,
+                           12, 11, 10, 11, 11, 10, 15, 23, 30, 62, 81, 88, 94, 95, 92, 90, 85, 75, 71, 60, 45, 35, 15, 11, 12, 12,
+                           12, 11, 10, 11, 11, 10, 15, 23, 30, 62, 81, 88, 94, 95, 92, 90, 85, 75, 71, 60, 45, 35, 15, 11, 12, 12,
+                           12, 11, 10, 11, 11, 10, 15, 25, 30, 62, 81, 88, 94, 95, 92, 90, 85, 75, 71, 60, 45, 35, 15, 11, 12, 12,
+                           12, 11, 10, 11, 11, 10, 15, 23, 30, 62, 81, 88, 94, 102, 100, 105, 85, 75, 75, 60, 45, 35, 15, 11, 12, 12,
+                           12, 11, 10, 11, 11, 10, 15, 23, 30, 62, 81, 88, 94, 95, 92, 90, 85, 75, 71, 60, 45, 35, 15, 11, 12, 12,
+                           12, 11, 10, 11, 11, 15, 15, 23, 30, 62, 81, 90, 94, 95, 92, 90, 85, 75, 71, 60, 45, 35, 15, 11, 12, 12]
+                }
+            ];
         </script>
 
         <h3>Temperature</h3>
